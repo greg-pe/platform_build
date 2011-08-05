@@ -31,7 +31,7 @@ PRODUCT_PACKAGES := \
 PRODUCT_PROPERTY_OVERRIDES := \
     keyguard.no_require_sim=true \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=true \
+    ro.com.android.dataroaming=false \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10
 
