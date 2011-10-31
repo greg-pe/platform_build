@@ -77,7 +77,10 @@ $(warning ************************************************************)
 $(warning You are attempting to build on a 32-bit system.)
 $(warning Only 64-bit build environments are supported beyond froyo/2.2.)
 $(warning ************************************************************)
+#$(error stop)
+#allow building on 32-bit system
 BUILDING_ON_32BIT := true
+#end line
 endif
 endif
 
@@ -147,8 +150,10 @@ endif
 
 $(shell echo 'VERSIONS_CHECKED := $(VERSION_CHECK_SEQUENCE_NUMBER)' \
         > $(OUT_DIR)/versions_checked.mk)
+#allow building on 32-bit system
 $(shell echo 'BUILDING_ON_32BIT := $(BUILDING_ON_32BIT)' \
         >> $(OUT_DIR)/versions_checked.mk)
+#end line
 endif
 
 # These are the modifier targets that don't do anything themselves, but
