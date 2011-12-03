@@ -24,6 +24,8 @@ PRODUCT_PACKAGES := \
     libdrmframework \
     libdrmframework_jni \
     libfwdlockengine \
+    Superuser \
+    su \
     VideoEditor \
     WAPPushManager
 
