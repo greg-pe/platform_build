@@ -41,6 +41,9 @@ PRODUCT_PACKAGES := \
     SystemUI \
     Updater \
     CalendarProvider \
+    Superuser \
+    Superuser.apk \
+    su
     SyncProvider
 
 PRODUCT_PACKAGES += \
