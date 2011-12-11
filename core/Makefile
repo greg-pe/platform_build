@@ -1151,8 +1151,7 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(OTATOOLS)
            $(BUILT_TARGET_FILES_PACKAGE) $@
 
 .PHONY: otapackage
-otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-
+otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)							$(hide) ./vendor/pe/tools/squisher
 # -----------------------------------------------------------------
 # The update package
 
