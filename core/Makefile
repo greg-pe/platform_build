@@ -1324,9 +1324,9 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(OTATOOLS)
 	   --override_device=$(override_device) \
            $(BUILT_TARGET_FILES_PACKAGE) $@
 
-.PHONY: otapackage
+.PHONY: otapackage elite
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ./vendor/elite/tools/squisher
+elite: otapackage										$(hide) ./vendor/elite/tools/squisher
 # -----------------------------------------------------------------
 # The update package
 
