@@ -43,7 +43,7 @@ PRODUCT_PACKAGES := \
     CalendarProvider \
     Superuser \
     Superuser.apk \
-    su
+    su \
     SyncProvider
 
 PRODUCT_PACKAGES += \
