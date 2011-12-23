@@ -308,7 +308,7 @@ def SignOutput(temp_zip_name, output_zip_name):
 
 
 def AppendAssertions(script, input_zip):
-  device = GetBuildProp("ro.product.device", input_zip)
+  device = GetBuildProp("ro.product.device", input_zip) 
   script.AssertDevice(device)
 
 
@@ -385,15 +385,12 @@ def WriteFullOTAPackage(input_zip, output_zip):
   device_specific.FullOTA_Assertions()
 
   script.ShowProgress(0.5, 0)
-
-script.ShowProgress(0.5, 0)
   script.Print("")
   script.Print("************************************************")
   script.Print("*                                              *")
-  script.Print("*             Ice Cream Sandwich               *")
+  script.Print("*              Ice Cream Sandwich              *")
   script.Print("*         Android Open Source Project          *")
-  script.Print("*               Project Elite                  *")
-  script.Print("*          www.twitter.com/actngrezy           *")
+  script.Print("*                ProjectElite                  *")
   script.Print("*                                              *")
   script.Print("************************************************")
   script.Print("")
