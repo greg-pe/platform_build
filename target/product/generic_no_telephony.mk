@@ -24,15 +24,12 @@ PRODUCT_PACKAGES := \
     AlarmProvider \
     Bluetooth \
     Calculator \
-    Calendar \
     CertInstaller \
     DrmProvider \
     Email \
     Exchange \
-    Gallery2 \
     LatinIME \
     Launcher2 \
-    Music \
     MusicFX \
     Phone \
     Settings \
