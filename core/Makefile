@@ -1319,7 +1319,9 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(OTATOOLS)
 
 .PHONY: otapackage elite
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-
+elite: otapackage
+	@echo "Running squisher tools"
+	$(hide) ./vendor/elite/tools/squisher
 # -----------------------------------------------------------------
 # The update package
 
