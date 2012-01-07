@@ -40,10 +40,7 @@ PRODUCT_PACKAGES := \
     SyncProvider \
     bluetooth-health \
     hostapd \
-    wpa_supplicant.conf \
-    Superuser \
-    Superuser.apk \
-    su 
+    wpa_supplicant.conf 
 
 PRODUCT_PACKAGES += \
     icu.dat
