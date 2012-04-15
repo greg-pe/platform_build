@@ -388,22 +388,26 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("")
   script.Print("************************************************")
   script.Print("*                                              *")
-  script.Print("*              Ice Cream Sandwich              *")
-  script.Print("*                   4.0.3                      *")
-  script.Print("*               ProjectElite BETA              *")
+  script.Print("*           Ice Cream Sandwich 4.0.4           *")
+  script.Print("*              ProjectElite Beta               *")
+  script.Print("*             www.projectelite.net             *")
   script.Print("*                                              *")
   script.Print("************************************************")
   script.Print("")
-  script.Print("Installing system files...")
+  script.Print("")
+  script.Print("Formatting system partition")
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
 
   script.FormatPartition("/system")
   script.Mount("/system")
+  script.ShowProgress(0.5, 40)
+  script.Print("Installing System...")
   #script.UnpackPackageDir("recovery", "/system")
   script.UnpackPackageDir("system", "/system")
 
-  script.Print("Symlinks and permissions...")
+  script.Print("Creating Symlinks...")
+  script.Print("Setting Permissions...")
   (symlinks, retouch_files) = CopySystemFiles(input_zip, output_zip)
   script.MakeSymlinks(symlinks)
   if OPTIONS.aslr_mode:
@@ -429,7 +433,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.WriteRawImage("/boot", "boot.img")
 
   script.ShowProgress(0.1, 0)
-  script.Print("Installation of ICS Beta Now Installed!")
+  script.Print("Installation Complete!")
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:
