@@ -381,7 +381,19 @@ def WriteFullOTAPackage(input_zip, output_zip):
   device_specific.FullOTA_InstallBegin()
 
   script.ShowProgress(0.5, 0)
-
+  script.Print("")
+  script.Print("Android Open Source Project")
+  script.Print("***************************")
+  script.Print("Jelly Bean 4.1.1")
+  script.Print("ProjectElite Beta")
+  script.Print("Actngrezy")
+  script.Print("")
+  script.Print("")
+  script.Print("")
+  script.Print("")
+  script.Print("Installation will now begin...")
+  script.Print("Formatting system partition")
+  
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
 
@@ -390,8 +402,12 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.FormatPartition("/system")
   script.Mount("/system")
+  script.ShowProgress(0.5, 40)
+  script.Print("Installing System...")
   script.UnpackPackageDir("system", "/system")
 
+  script.Print("Creating Symlinks...")
+  script.Print("Setting Permissions...")
   symlinks = CopySystemFiles(input_zip, output_zip)
   script.MakeSymlinks(symlinks)
 
@@ -406,9 +422,11 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.ShowProgress(0.2, 0)
 
   script.ShowProgress(0.2, 10)
+  script.Print("Flashing boot image...")
   script.WriteRawImage("/boot", "boot.img")
 
   script.ShowProgress(0.1, 0)
+  script.Print("Installation Complete!")
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:
