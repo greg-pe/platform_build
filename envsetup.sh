@@ -424,7 +424,7 @@ function print_lunch_menu()
     echo
     echo "You're building on" $uname
     echo
-    echo "Lunch menu... pick a combo:"
+    echo "Lunch menu... pick a device build configuration:"
 
     local i=1
     local choice
@@ -445,7 +445,7 @@ function lunch()
         answer=$1
     else
         print_lunch_menu
-        echo -n "Which would you like? [full-eng] "
+        echo -n "Which would you like to build? "
         read answer
     fi
 
