@@ -1173,14 +1173,11 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   -k $(KEY_CERT_PAIR) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-.PHONY: otapackage bacon
+.PHONY: otapackage elite
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-bacon: otapackage
-ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
-	$(hide) \
-	$(TARGET_CUSTOM_RELEASETOOL)
-endif
-
+elite: otapackage
+	@echo "Running squisher tools"
+	$(hide) ./vendor/elite/tools/squisher
 # -----------------------------------------------------------------
 # The update package
 
