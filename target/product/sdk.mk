@@ -24,15 +24,8 @@ PRODUCT_PACKAGES := \
 	Exchange \
 	FusedLocation \
 	Gallery \
-	Music \
 	Mms \
-	OpenWnn \
-	libWnnEngDic \
-	libWnnJpnDic \
-	libwnndict \
 	Phone \
-	PinyinIME \
-	Protips \
 	SoftKeyboard \
 	SystemUI \
 	Launcher2 \
