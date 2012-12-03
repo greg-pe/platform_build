@@ -31,7 +31,6 @@ PRODUCT_PACKAGES := \
     FusedLocation \
     Gallery2 \
     InputDevices \
-    LatinIME \
     MusicFX \
     Phone \
     Settings \
