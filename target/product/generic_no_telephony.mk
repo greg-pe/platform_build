@@ -29,6 +29,7 @@ PRODUCT_PACKAGES := \
     Exchange2 \
     FusedLocation \
     InputDevices \
+    LatinIME \
     MusicFX \
     Phone \
     Settings \

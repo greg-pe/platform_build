@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     libhardware_legacy \
     libiprouteutil \
     libjnigraphics \
+    libjni_latinime \
     libjpeg \
     liblog \
     libm \
