@@ -31,7 +31,8 @@ PRODUCT_PACKAGES += \
     MagicSmokeWallpapers \
     NoiseField \
     PhaseBeam \
-    VisualizationWallpapers
+    VisualizationWallpapers \
+    PhotoTable
 
 PRODUCT_PACKAGES += \
     libvideoeditor_jni \
